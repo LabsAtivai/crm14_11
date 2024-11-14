@@ -1,65 +1,122 @@
+/* Geral */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
 }
 
+/* Container principal */
 .container {
     width: 400px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Cabeçalho */
 .header {
-    background-color: #ff6600;
+    background-color: #ff6600; /* Cor laranja */
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px 8px 0 0;
 }
 
-.contact-info, .history {
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Botão de login */
+#btnGoogleLogin {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#btnGoogleLogin:hover {
+    background-color: #444;
+}
+
+/* Lista de contatos e histórico de e-mails */
+#contact-list, #email-history {
     margin-top: 20px;
 }
 
-.contact-info label, .history h3 {
+#contact-list h2, #email-history h2 {
+    font-size: 18px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+/* Estilo das mensagens de e-mail */
+.email-item {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.email-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #333;
+}
+
+.email-header strong {
+    color: #ff6600;
+}
+
+.email-subject {
     font-weight: bold;
-    margin-top: 10px;
-}
-
-input, textarea {
-    width: 100%;
+    color: #333;
     margin-top: 5px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+.email-snippet {
+    font-size: 13px;
+    color: #555;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Botão "Carregar mais" */
+.load-more {
+    background-color: #ff6600;
     color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
+    width: 100%;
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.load-more:hover {
+    background-color: #e55d00;
 }
 
-.history .message {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-    margin-top: 10px;
+/* Ajuste para rolagem em listas longas */
+#email-history-list {
+    max-height: 300px;
+    overflow-y: auto;
 }
